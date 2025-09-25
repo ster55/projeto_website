@@ -1,0 +1,61 @@
+.panda-face {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #191919;
+}
+.panda-ear {
+    position: absolute;
+    top: -18px;
+    width: 24px;
+    height: 24px;
+    background: #232323;
+    border-radius: 50%;
+}
+.panda-ear.left { left: -12px; }
+.panda-ear.right { right: -12px; }
+.panda-eye {
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 18px;
+    background: #232323;
+    border-radius: 50%;
+}
+.panda-eye.left { left: 10px; }
+.panda-eye.right { right: 38px; }
+.panda-blink {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 3px auto;
+    animation: blink 3.7s infinite;
+}
+.panda-eye.right .panda-blink { animation-delay: 0.7s; }
+@keyframes blink {
+    0%, 92%, 100% { height: 12px; }
+    93%, 95% { height: 2px; }
+}
+.panda-nose {
+    position: absolute;
+    left: 26px;
+    top: 35px;
+    width: 12px;
+    height: 8px;
+    background: #232323;
+    border-radius: 50% 50% 60% 60%;
+}
+.panda-mouth {
+    position: absolute;
+    left: 24px;
+    top: 47px;
+    width: 16px;
+    height: 8px;
+    border-bottom: 2px solid #232323;
+    border-radius: 0 0 20px 20px;
+}
