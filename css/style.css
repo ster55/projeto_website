@@ -1,3 +1,63 @@
+/*
+ * Arquivo: style.css
+ * Tema: Lady Gaga - Orbitron & Red
+ */
+
+/* 1. Estilos Globais e da Fonte */
 body {
-    background-color: rgb(139, 86, 16);
+    background-color: #000; /* Fundo preto para o site */
 }
+
+/* Força a fonte Orbitron para títulos e o nome da marca */
+h1, h2, h3, h4, .navbar-brand {
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+/* 2. Estilo do Menu (Navbar) */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8); /* Cor mais suave para links normais */
+    transition: color 0.3s ease; /* Transição para o efeito hover */
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #dc3545; /* Cor vermelha (danger) no hover e ativo */
+}
+
+/* 3. Efeito Hover nos Cards (Informações e Galeria) */
+.card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transição suave */
+    overflow: hidden; /* Garantir que o conteúdo não saia */
+}
+
+.card-hover:hover {
+    transform: translateY(-5px); /* Move o card levemente para cima */
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.4) !important; /* Sombra vermelha brilhante no hover */
+}
+
+.card-hover .card-img-top {
+    transition: transform 0.4s ease;
+}
+
+.card-hover:hover .card-img-top {
+    transform: scale(1.05); /* Zoom sutil na imagem no hover */
+}
+
+/* 4. Melhoria do Mascote (Monster) */
+
+/* Efeito de rotação e brilho contínuo sutil */
+.monster-animation {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    /* Adiciona um brilho sutil ao redor */
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.6), 0 0 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Animação no hover para o mascote */
+.monster-animation:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta e rotaciona um pouco */
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.8), 0 0 30px rgba(220, 53, 69, 0.6); /* Brilho mais intenso */
+}
+
+/* O mascote agora usa a classe 'animate__tada' do Animate.css para o clique */

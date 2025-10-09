@@ -3,11 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Gaga: Da Origem ao Presente | Little Monsters</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
-    <img src="images/b.webp" alt="">
+    <section id="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand text-danger fs-3 fw-bold" href="#" style="font-family:'Orbitron',sans-serif;">LADY GAGA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#informacoes">Informações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#midia">Mídia / Mapa</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-outline-danger ms-lg-3" href="discografia.html">Discografia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="home" class="bg-black text-light py-5 d-flex align-items-center" style="min-height: 100vh;">
+        <div class="container text-center pt-5">
+            <img src="images/banner_gaga.jpg" class="img-fluid rounded-4 mb-4 shadow-lg border border-danger border-5" alt="Banner Lady Gaga">
+            <h1 class="display-3 text-danger fw-bolder animate__animated animate__fadeInDown" style="font-family:'Orbitron',sans-serif;">O Início Até os Dias Atuais</h1>
+            <p class="lead fs-4 fw-light mt-3 animate__animated animate__fadeInUp">A trajetória brilhante, ousada e inovadora da carreira de Lady Gaga.</p>
+        </div>
+    </section>
+
+    <section id="informacoes" class="py-5 bg-dark text-light">
+        <div class="container">
+            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">INFORMAÇÕES CHAVE</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-star-fill me-2"></i> O Começo</h5>
+                            <p class="card-text">Stefani Joanne Angelina Germanotta, conhecida como Lady Gaga, iniciou sua carreira nos **clubes de Nova York** antes de se tornar uma das maiores estrelas pop do mundo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-rocket-fill me-2"></i> Ascensão</h5>
+                            <p class="card-text">Seu primeiro álbum, **"The Fame"**, trouxe hits como "Just Dance" e "Poker Face", consolidando seu estilo inovador e ousado na cena musical.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-globe-americas me-2"></i> Presente</h5>
+                            <p class="card-text">Lady Gaga segue reinventando sua música e imagem, com sucessos em diversos gêneros, além de atuar em filmes e engajar **causas sociais importantes**.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-5 bg-black text-light">
+        <div class="container">
+            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">GALERIA DE IMAGENS</h2>
+            <div class="row g-4">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card card-hover bg-dark border-0 shadow-lg">
+                        <img src="images/gaga_early.jpg" class="card-img-top img-fluid" alt="Lady Gaga início">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-light">Primeiros anos da carreira e performances em clubes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card card-hover bg-dark border-0 shadow-lg">
+                        <img src="images/gaga_fame.jpg" class="card-img-top img-fluid" alt="The Fame Era">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-light">O visual icônico da era "The Fame" e "The Fame Monster".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card card-hover bg-dark border-0 shadow-lg">
+                        <img src="images/gaga_chromatica.jpg" class="card-img-top img-fluid" alt="Chromatica Era">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-light">A estética futurista e dançante da era "Chromatica".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="midia" class="py-5 bg-dark text-light">
+        <div class="container">
+            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">MÍDIA E LOCAL DE ORIGEM</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-6">
+                    <h4 class="text-center text-light mb-3">Videoclipe em Destaque</h4>
+                    <div class="ratio ratio-16x9 shadow-lg border border-danger">
+                        <iframe src="https://www.youtube.com/embed/5vheNbQlsyU" title="Video Lady Gaga - Bad Romance" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-center text-light mb-3">Nova York: Onde Tudo Começou</h4>
+                    <div class="ratio ratio-16x9 shadow-lg border border-danger">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0134%2C40.7069%2C-73.9775%2C40.7304&amp;layer=mapnik" style="border:1px solid black" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="monster" class="py-5 text-center bg-black">
+        <div class="container">
+            <h2 class="text-center text-danger mb-4" style="font-family:'Orbitron',sans-serif;">Seja um Little Monster!</h2>
+            <img src="images/monster.png" alt="Mascote Monster" id="monsterImg" class="monster-img mb-3 monster-animation" style="width:150px;cursor:pointer;">
+            <p class="lead text-light mb-4">Clique no **Monster** (ou no botão) para liberar uma curiosidade aleatória!</p>
+            <button id="monsterBtn" class="btn btn-danger btn-lg shadow-lg">Curiosidade Aleatória</button>
+            <div id="monsterCuriosity" class="mt-4 text-warning fs-4 fw-bold animate__animated"></div>
+        </div>
+    </section>
+
+    <section id="rodape" class="bg-dark text-light py-4">
+        <div class="container">
+            <hr class="border-danger">
+            <p class="mb-1 text-center small">&copy; 2025 - Site desenvolvido para Atividade Final de DSA1</p>
+            <p class="mb-1 text-center small">Turma: INF1XT | Projeto dedicado à Rainha do Pop</p>
+            <div class="row justify-content-center mt-3">
+                <div class="col-auto">
+                    <h6 class="text-danger">Integrantes:</h6>
+                    <ul class="list-unstyled text-center small">
+                        <li>° Beltrana, 1</li>
+                        <li>° Fulano, 8</li>
+                        <li>° Sicrana, 17</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const curiosities = [
+            "Lady Gaga já ganhou **13 Grammys**, 2 Globos de Ouro, 1 Oscar e 1 BAFTA!",
+            "O nome artístico 'Lady Gaga' foi inspirado na música **'Radio Ga Ga' do Queen**.",
+            "Ela foi a primeira artista a ganhar o Oscar, Grammy, BAFTA e Globo de Ouro (o 'Grand Slam' da indústria do entretenimento) no mesmo ano.",
+            "Gaga já atuou em filmes aclamados como **'Nasce Uma Estrela'** e séries como 'American Horror Story'.",
+            "Sua fundação, a **Born This Way Foundation**, apoia o bem-estar mental de jovens e luta contra o bullying."
+        ];
+        
+        const curiosityDiv = document.getElementById('monsterCuriosity');
+        const monsterImg = document.getElementById('monsterImg');
+
+        function showCuriosity() {
+            // Escolhe uma curiosidade aleatória
+            const rand = Math.floor(Math.random() * curiosities.length);
+            const curiosity = curiosities[rand];
+            
+            // Remove a classe de animação para resetar
+            curiosityDiv.classList.remove('animate__fadeIn');
+
+            // Adiciona a curiosidade (com suporte a HTML para negrito)
+            curiosityDiv.innerHTML = curiosity;
+
+            // Dispara a animação (usando requestAnimationFrame para garantir o reset)
+            requestAnimationFrame(() => {
+                curiosityDiv.classList.add('animate__fadeIn');
+            });
+
+            // Animação do mascote
+            monsterImg.classList.add('animate__tada');
+            setTimeout(() => {
+                monsterImg.classList.remove('animate__tada');
+            }, 1000); // Duração da animação 'tada'
+        }
+
+        document.getElementById('monsterImg').addEventListener('click', showCuriosity);
+        document.getElementById('monsterBtn').addEventListener('click', showCuriosity);
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
-</html
+</html>
