@@ -1,194 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lady Gaga: Da Origem ao Presente | Little Monsters</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lady Gaga — Da Origem ao Presente | Little Monsters</title>
+
+  <!-- Bootstrap 5.2.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
-    <section id="menu">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
-            <div class="container">
-                <a class="navbar-brand text-danger fs-3 fw-bold" href="#" style="font-family:'Orbitron',sans-serif;">LADY GAGA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#informacoes">Informações</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#midia">Mídia / Mapa</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-outline-danger ms-lg-3" href="discografia.html">Discografia</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
 
-    <section id="home" class="bg-black text-light py-5 d-flex align-items-center" style="min-height: 100vh;">
-        <div class="container text-center pt-5">
-            <img src="images/banner_gaga.jpg" class="img-fluid rounded-4 mb-4 shadow-lg border border-danger border-5" alt="Banner Lady Gaga">
-            <h1 class="display-3 text-danger fw-bolder animate__animated animate__fadeInDown" style="font-family:'Orbitron',sans-serif;">O Início Até os Dias Atuais</h1>
-            <p class="lead fs-4 fw-light mt-3 animate__animated animate__fadeInUp">A trajetória brilhante, ousada e inovadora da carreira de Lady Gaga.</p>
+  <!-- NAV -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold brand-animate" href="#">LADY GAGA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link hover-highlight" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link hover-highlight" href="#bio">Biografia</a></li>
+          <li class="nav-item"><a class="nav-link hover-highlight" href="#pontos">Pontos-chave</a></li>
+          <li class="nav-item"><a class="nav-link hover-highlight" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link hover-highlight" href="#midia">Mídia</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-outline-light" href="discografia.html">Discografia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero d-flex align-items-center text-light">
+    <div class="container text-center py-5">
+      <h1 class="display-5 fw-bold reveal">Lady Gaga — Da Origem ao Presente</h1>
+      <p class="lead mt-3 mb-4 reveal delay-1">Uma jornada da cena alternativa de Nova York até os palcos mundiais: música, atuação e ativismo.</p>
+      <a href="#bio" class="btn btn-primary btn-lg reveal delay-2">Conheça a História</a>
+      <a href="#pontos" class="btn btn-outline-light btn-lg reveal delay-3">Pontos Principais</a>
+    </div>
+  </header>
+
+  <!-- BIO / LONG READ -->
+  <section id="bio" class="py-5 section-bg">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <img src="images/banner_gaga.jpg" alt="Lady Gaga banner" class="img-fluid rounded shadow-lg reveal">
         </div>
-    </section>
+        <div class="col-lg-6">
+          <h2 class="section-title reveal">O Início — Stefani Germanotta em Nova York</h2>
+          <p class="lead reveal delay-1">Stefani Joanne Angelina Germanotta cresceu em Nova York e logo mergulhou na cena musical local. Ainda muito jovem, tocava piano, escrevia canções e apresentava-se em clubes e cafés do East Village — período fundamental para sua formação artística.</p>
 
-    <section id="informacoes" class="py-5 bg-dark text-light">
-        <div class="container">
-            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">INFORMAÇÕES CHAVE</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
-                        <div class="card-body">
-                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-star-fill me-2"></i> O Começo</h5>
-                            <p class="card-text">Stefani Joanne Angelina Germanotta, conhecida como Lady Gaga, iniciou sua carreira nos **clubes de Nova York** antes de se tornar uma das maiores estrelas pop do mundo.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
-                        <div class="card-body">
-                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-rocket-fill me-2"></i> Ascensão</h5>
-                            <p class="card-text">Seu primeiro álbum, **"The Fame"**, trouxe hits como "Just Dance" e "Poker Face", consolidando seu estilo inovador e ousado na cena musical.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-hover bg-black text-light h-100 border border-danger shadow">
-                        <div class="card-body">
-                            <h5 class="card-title text-danger fw-bold"><i class="bi bi-globe-americas me-2"></i> Presente</h5>
-                            <p class="card-text">Lady Gaga segue reinventando sua música e imagem, com sucessos em diversos gêneros, além de atuar em filmes e engajar **causas sociais importantes**.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <h3 class="mt-4 reveal delay-2">Ascensão e Estilo</h3>
+          <p class="reveal delay-2">Ao adotar o nome artístico "Lady Gaga", ela combinou teatralidade, moda e música pop eletrônica. Seu álbum de estreia, <strong>The Fame</strong> (2008), e singles como <em>Just Dance</em> e <em>Poker Face</em> consolidaram seu estilo ousado e performático.</p>
+
+          <h3 class="mt-4 reveal delay-3">Evolução Artística</h3>
+          <p class="reveal delay-3">Desde pop dançante até jazz (colaborações com Tony Bennett), trilhas sonoras e atuação (incluindo <em>A Star Is Born</em>), Gaga renovou-se constantemente. Sua carreira é marcada por reinvenção, experimentação e compromisso com causas sociais.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="galeria" class="py-5 bg-black text-light">
-        <div class="container">
-            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">GALERIA DE IMAGENS</h2>
-            <div class="row g-4">
-                <div class="col-sm-6 col-md-4">
-                    <div class="card card-hover bg-dark border-0 shadow-lg">
-                        <img src="images/gaga_early.jpg" class="card-img-top img-fluid" alt="Lady Gaga início">
-                        <div class="card-body text-center">
-                            <p class="card-text fw-light">Primeiros anos da carreira e performances em clubes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card card-hover bg-dark border-0 shadow-lg">
-                        <img src="images/gaga_fame.jpg" class="card-img-top img-fluid" alt="The Fame Era">
-                        <div class="card-body text-center">
-                            <p class="card-text fw-light">O visual icônico da era "The Fame" e "The Fame Monster".</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card card-hover bg-dark border-0 shadow-lg">
-                        <img src="images/gaga_chromatica.jpg" class="card-img-top img-fluid" alt="Chromatica Era">
-                        <div class="card-body text-center">
-                            <p class="card-text fw-light">A estética futurista e dançante da era "Chromatica".</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- KEY POINTS / TIMELINE -->
+  <section id="pontos" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 reveal">Pontos Principais da Carreira</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-badge bg-danger">1998–2006</div>
+          <div class="timeline-panel">
+            <h5>Formação e Clubes de Nova York</h5>
+            <p>Prática intensiva de piano desde a infância. Performances em clubes do East Village, networking com produtores e primeiros passos como compositora.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="midia" class="py-5 bg-dark text-light">
-        <div class="container">
-            <h2 class="text-center text-danger mb-5 pb-3 border-bottom border-danger" style="font-family:'Orbitron',sans-serif;">MÍDIA E LOCAL DE ORIGEM</h2>
-            <div class="row justify-content-center g-4">
-                <div class="col-md-6">
-                    <h4 class="text-center text-light mb-3">Videoclipe em Destaque</h4>
-                    <div class="ratio ratio-16x9 shadow-lg border border-danger">
-                        <iframe src="https://www.youtube.com/embed/5vheNbQlsyU" title="Video Lady Gaga - Bad Romance" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="text-center text-light mb-3">Nova York: Onde Tudo Começou</h4>
-                    <div class="ratio ratio-16x9 shadow-lg border border-danger">
-                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0134%2C40.7069%2C-73.9775%2C40.7304&amp;layer=mapnik" style="border:1px solid black" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-badge bg-gold">2008</div>
+          <div class="timeline-panel">
+            <h5>The Fame</h5>
+            <p>Lançamento do álbum de estreia que trouxe os hits <em>Just Dance</em> e <em>Poker Face</em>, dando início ao reconhecimento global.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="monster" class="py-5 text-center bg-black">
-        <div class="container">
-            <h2 class="text-center text-danger mb-4" style="font-family:'Orbitron',sans-serif;">Seja um Little Monster!</h2>
-            <img src="images/monster.png" alt="Mascote Monster" id="monsterImg" class="monster-img mb-3 monster-animation" style="width:150px;cursor:pointer;">
-            <p class="lead text-light mb-4">Clique no **Monster** (ou no botão) para liberar uma curiosidade aleatória!</p>
-            <button id="monsterBtn" class="btn btn-danger btn-lg shadow-lg">Curiosidade Aleatória</button>
-            <div id="monsterCuriosity" class="mt-4 text-warning fs-4 fw-bold animate__animated"></div>
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-badge bg-danger">2009–2011</div>
+          <div class="timeline-panel">
+            <h5>The Fame Monster & Expansão</h5>
+            <p>A era <em>The Fame Monster</em> aprofundou o ícone visual e sonoro. Revelações em videoclipes, performances teatrais e turnês de grande escala.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="rodape" class="bg-dark text-light py-4">
-        <div class="container">
-            <hr class="border-danger">
-            <p class="mb-1 text-center small">&copy; 2025 - Site desenvolvido para Atividade Final de DSA1</p>
-            <p class="mb-1 text-center small">Turma: INF1XT | Projeto dedicado à Rainha do Pop</p>
-            <div class="row justify-content-center mt-3">
-                <div class="col-auto">
-                    <h6 class="text-danger">Integrantes:</h6>
-                    <ul class="list-unstyled text-center small">
-                        <li>° Beltrana, 1</li>
-                        <li>° Fulano, 8</li>
-                        <li>° Sicrana, 17</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="timeline-item reveal delay-3">
+          <div class="timeline-badge bg-gold">2013–2017</div>
+          <div class="timeline-panel">
+            <h5>Experimentação e Atuação</h5>
+            <p>Álbuns como <em>Artpop</em> e trabalhos que mostram versatilidade. Início da carreira no cinema com papéis fortes e aclamados.</p>
+          </div>
         </div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const curiosities = [
-            "Lady Gaga já ganhou **13 Grammys**, 2 Globos de Ouro, 1 Oscar e 1 BAFTA!",
-            "O nome artístico 'Lady Gaga' foi inspirado na música **'Radio Ga Ga' do Queen**.",
-            "Ela foi a primeira artista a ganhar o Oscar, Grammy, BAFTA e Globo de Ouro (o 'Grand Slam' da indústria do entretenimento) no mesmo ano.",
-            "Gaga já atuou em filmes aclamados como **'Nasce Uma Estrela'** e séries como 'American Horror Story'.",
-            "Sua fundação, a **Born This Way Foundation**, apoia o bem-estar mental de jovens e luta contra o bullying."
-        ];
-        
-        const curiosityDiv = document.getElementById('monsterCuriosity');
-        const monsterImg = document.getElementById('monsterImg');
+        <div class="timeline-item reveal delay-4">
+          <div class="timeline-badge bg-danger">2018–Presente</div>
+          <div class="timeline-panel">
+            <h5>Reinvenção Contínua e Ativismo</h5>
+            <p>Trabalhos como <em>Chromatica</em>, colaborações de jazz, prêmios importantes (incluindo Grammys e um Oscar), e forte atuação em causas como saúde mental e direitos LGBTQ+.</p>
+          </div>
+        </div>
+      </div>
 
-        function showCuriosity() {
-            // Escolhe uma curiosidade aleatória
-            const rand = Math.floor(Math.random() * curiosities.length);
-            const curiosity = curiosities[rand];
-            
-            // Remove a classe de animação para resetar
-            curiosityDiv.classList.remove('animate__fadeIn');
+    </div>
+  </section>
 
-            // Adiciona a curiosidade (com suporte a HTML para negrito)
-            curiosityDiv.innerHTML = curiosity;
+  <!-- GALLERY -->
+  <section id="galeria" class="py-5 section-bg">
+    <div class="container">
+      <h2 class="text-center mb-4 reveal">Galeria</h2>
+      <div class="row g-3">
+        <div class="col-sm-6 col-md-4">
+          <figure class="figure card bg-dark text-light shadow-sm hover-card reveal delay-1">
+            <img src="images/gaga_early.jpg" class="figure-img img-fluid rounded-top" alt="Lady Gaga início">
+            <figcaption class="figure-caption p-3 hover-highlight">Primeiros shows e looks caseiros — a construção do perfil artístico.</figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <figure class="figure card bg-dark text-light shadow-sm hover-card reveal delay-2">
+            <img src="images/gaga_fame.jpg" class="figure-img img-fluid rounded-top" alt="The Fame Era">
+            <figcaption class="figure-caption p-3 hover-highlight">A era <em>The Fame</em> — estética pop e o surgimento do fenômeno.</figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <figure class="figure card bg-dark text-light shadow-sm hover-card reveal delay-3">
+            <img src="images/gaga_chromatica.jpg" class="figure-img img-fluid rounded-top" alt="Chromatica Era">
+            <figcaption class="figure-caption p-3 hover-highlight"><em>Chromatica</em> — retorno ao dance pop com estética futurista.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Dispara a animação (usando requestAnimationFrame para garantir o reset)
-            requestAnimationFrame(() => {
-                curiosityDiv.classList.add('animate__fadeIn');
-            });
+  <!-- MEDIA & MAP -->
+  <section id="midia" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 reveal">Mídia e Local de Origem</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9 shadow-sm reveal delay-1">
+            <iframe src="https://www.youtube.com/embed/Ar4J6gE3g6w" title="Vídeo - Exemplo" allowfullscreen></iframe>
+          </div>
+        </div>
 
-            // Animação do mascote
-            monsterImg.classList.add('animate__tada');
-            setTimeout(() => {
-                monsterImg.classList.remove('animate__tada');
-            }, 1000); // Duração da animação 'tada'
-        }
+        <div class="col-md-6">
+          <h5 class="mb-3 reveal delay-2">Nova York — East Village</h5>
+          <div class="ratio ratio-4x3 shadow-sm reveal delay-3">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0090%2C40.7220%2C-73.9910%2C40.7320&amp;layer=mapnik" style="border:1px solid rgba(0,0,0,0.12)"></iframe>
+          </div>
+          <p class="small mt-2 text-muted reveal delay-4">Mapa aproximado da área onde Gaga iniciou suas performances.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.getElementById('monsterImg').addEventListener('click', showCuriosity);
-        document.getElementById('monsterBtn').addEventListener('click', showCuriosity);
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- CTA / FUN -->
+  <section class="py-5 section-bg text-center">
+    <div class="container">
+      <h3 class="mb-3 reveal">Quer uma curiosidade rápida?</h3>
+      <p class="mb-3 reveal delay-1">Clique no botão para ver fatos rápidos sobre a carreira.</p>
+      <button id="curioBtn" class="btn btn-danger btn-lg reveal delay-2"><i class="bi bi-lightbulb-fill me-2"></i>Curiosidade</button>
+      <div id="curioText" class="mt-3 text-warning fs-5" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-light bg-dark">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 — Projeto: Lady Gaga | Atividade Final DSA1</p>
+      <small class="text-muted">Desenvolvido por equipe Little Monsters</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle 5.2.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Animations / interactivity -->
+  <script>
+    (function(){
+      // Curiosidades
+      const curiosities = [
+        "Stefani começou a tocar piano aos 4 anos e compunha muito antes do sucesso comercial.",
+        "O nome 'Lady Gaga' foi inspirado em uma canção do Queen: 'Radio Ga Ga'.",
+        "Ganhadora de múltiplos Grammys e indicada a prêmios de cinema por 'A Star Is Born'.",
+        "Fundou a 'Born This Way Foundation' para apoio a jovens e saúde mental.",
+        "Versátil: do pop dançante a colaborações de jazz com Tony Bennett."
+      ];
+
+      const btn = document.getElementById('curioBtn');
+      const tgt = document.getElementById('curioText');
+
+      function showCurio() {
+        const i = Math.floor(Math.random()*curiosities.length);
+        tgt.textContent = curiosities[i];
+        tgt.classList.add('fade-in');
+        setTimeout(()=> tgt.classList.remove('fade-in'), 1200);
+      }
+
+      btn.addEventListener('click', showCurio);
+
+      // Keyboard focus styles for links
+      document.querySelectorAll('.hover-highlight').forEach(el => {
+        el.addEventListener('focus', ()=> el.classList.add('hover-active'));
+        el.addEventListener('blur', ()=> el.classList.remove('hover-active'));
+      });
+
+      // Reveal on scroll with IntersectionObserver
+      if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){
+              entry.target.classList.add('show');
+              io.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.12});
+        reveals.forEach(el=> io.observe(el));
+      } else {
+        // If user prefers reduced motion, show all reveals immediately
+        document.querySelectorAll('.reveal').forEach(el=> el.classList.add('show'));
+      }
+
+      // Tilt effect for cards
+      document.querySelectorAll('.hover-card').forEach(card => {
+        card.addEventListener('mousemove', (e)=>{
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform = `perspective(900px) rotateX(${ -y * 6 }deg) rotateY(${ x * 10 }deg) scale(1.02)`;
+          card.style.transition = 'transform 150ms ease';
+        });
+        card.addEventListener('mouseleave', ()=>{
+          card.style.transform = '';
+          card.style.transition = 'transform 300ms ease';
+        });
+        // Provide a small click feedback for touch
+        card.addEventListener('touchstart', ()=> card.classList.add('touch-active'));
+        card.addEventListener('touchend', ()=> card.classList.remove('touch-active'));
+      });
+
+    })();
+  </script>
+
 </body>
 </html>
