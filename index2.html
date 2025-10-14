@@ -3,860 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Discografia Completa | Lady Gaga</title>
-  
+  <meta name="description" content="Site dedicado à trajetória da Lady Gaga, com foco em sua carreira e legado musical.">
+  <meta name="author" content="Little Monsters">
+  <title>Lady Gaga — Da Origem ao Presente | Little Monsters</title>
+
   <!-- Bootstrap 5.2.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Library for Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
-  <style>
-    :root {
-      --red-strong: #e11d2d;
-      --gold: #f5c85c;
-      --bg-dark: #0b0b0d;
-      --muted: #9aa1a6;
-    }
- 
-    body {
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(135deg, #05060A 0%, #0b0b0d 100%);
-      color: #e8eef1;
-      padding-top: 80px;
-    }
- 
-    /* NAVBAR */
-    .navbar {
-      background: linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.7)) !important;
-      backdrop-filter: blur(10px);
-    }
- 
-    .navbar-brand {
-      color: var(--red-strong) !important;
-      font-weight: 800;
-    }
- 
-    .nav-link {
-      color: #dfe7ea !important;
-      transition: color 0.3s ease;
-    }
- 
-    .nav-link:hover {
-      color: var(--gold) !important;
-    }
- 
-    /* ALBUM CARDS */
-    .album-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      overflow: hidden;
-      height: 100%;
-    }
- 
-    .album-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(225,29,45,0.2);
-      border-color: var(--red-strong);
-    }
- 
-    .album-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
- 
-    .album-card:hover .album-image {
-      transform: scale(1.05);
-    }
- 
-    .album-year {
-      background: var(--red-strong);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
- 
-    .album-title {
-      color: var(--gold);
-      font-weight: 700;
-      margin: 10px 0 5px 0;
-    }
- 
-    .album-type {
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
- 
-    /* TRACKLIST */
-    .tracklist {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 0 0;
-    }
- 
-    .tracklist li {
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      justify-content: between;
-      align-items: center;
-    }
- 
-    .tracklist li:last-child {
-      border-bottom: none;
-    }
- 
-    .track-number {
-      color: var(--gold);
-      font-weight: 600;
-      margin-right: 10px;
-      min-width: 25px;
-    }
- 
-    .track-title {
-      flex: 1;
-    }
- 
-    .track-duration {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
- 
-    /* STATS */
-    .stats-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
- 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 5px;
-    }
- 
-    .stat-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
- 
-    /* AWARDS */
-    .award-badge {
-      background: linear-gradient(45deg, var(--red-strong), var(--gold));
-      color: white;
-      padding: 5px 12px;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin: 2px;
-      display: inline-block;
-    }
- 
-    /* FILTER BUTTONS */
-    .filter-btn {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--muted);
-      padding: 8px 20px;
-      border-radius: 25px;
-      margin: 5px;
-      transition: all 0.3s ease;
-    }
- 
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: var(--red-strong);
-      color: white;
-      border-color: var(--red-strong);
-    }
- 
-    /* SECTION TITLES */
-    .section-title {
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 2rem;
-      position: relative;
-      display: inline-block;
-    }
- 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--red-strong);
-    }
-  </style>
+
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <span class="logo-text">Little Monsters</span>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">LADY GAGA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand brand-animate" href="#">Little Monsters</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
+            <a class="nav-link hover-highlight" href="#bio">Biografia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#bio">Biografia</a>
+            <a class="nav-link hover-highlight" href="#timeline">Linha do Tempo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="discografia.html">Discografia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#galeria">Galeria</a>
+            <a class="nav-link hover-highlight" href="#gallery">Galeria</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
- 
-  <!-- HERO SECTION -->
-  <section class="py-5 mt-5">
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
     <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h1 class="display-4 fw-bold mb-3">Discografia Completa</h1>
-          <p class="lead mb-4">Explore toda a jornada musical de Lady Gaga, desde The Fame até Chromatica</p>
-          
-          <!-- FILTER BUTTONS -->
-          <div class="mb-5">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="album">Álbuns</button>
-            <button class="filter-btn" data-filter="ep">EPs</button>
-            <button class="filter-btn" data-filter="soundtrack">Trilhas Sonoras</button>
-            <button class="filter-btn" data-filter="collab">Colaborações</button>
-          </div>
-        </div>
-      </div>
+      <h1 class="display-4">Lady Gaga</h1>
+      <p class="lead">Da Origem ao Presente</p>
+      <a class="btn btn-primary" href="#bio">Conheça a História</a>
     </div>
   </section>
- 
-  <!-- ALBUMS GRID -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">Álbuns de Estúdio</h2>
-      <div class="row g-4" id="albumsGrid">
-        
-        <!-- THE FAME -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7b/Lady_Gaga_-_The_Fame.png" alt="The Fame" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2008</span>
-                <span class="award-badge">8× Platina</span>
-              </div>
-              <h3 class="album-title">The Fame</h3>
-              <p class="album-type">Álbum de Estúdio • Pop</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Just Dance</span><span class="track-duration">4:02</span></li>
-                <li><span class="track-number">2</span><span class="track-title">LoveGame</span><span class="track-duration">3:36</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Poker Face</span><span class="track-duration">3:58</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Eh, Eh (Nothing Else I Can Say)</span><span class="track-duration">2:55</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Beautiful, Dirty, Rich</span><span class="track-duration">2:53</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- THE FAME MONSTER -->
-        <div class="col-md-6 col-lg-4" data-category="ep">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/e/e0/The_Fame_Monster.png" alt="The Fame Monster" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2009</span>
-                <span class="award-badge">5× Platina</span>
-              </div>
-              <h3 class="album-title">The Fame Monster</h3>
-              <p class="album-type">EP • Pop/Dance</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Bad Romance</span><span class="track-duration">4:54</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Alejandro</span><span class="track-duration">4:34</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Monster</span><span class="track-duration">4:10</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Speechless</span><span class="track-duration">4:31</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Dance in the Dark</span><span class="track-duration">4:49</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- BORN THIS WAY -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7a/BornThisWayAlbum.png" alt="Born This Way" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2011</span>
-                <span class="award-badge">4× Platina</span>
-              </div>
-              <h3 class="album-title">Born This Way</h3>
-              <p class="album-type">Álbum de Estúdio • Pop/Rock</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Marry the Night</span><span class="track-duration">4:25</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Born This Way</span><span class="track-duration">4:20</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Government Hooker</span><span class="track-duration">4:14</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Judas</span><span class="track-duration">4:10</span></li>
-                <li><span class="track-number">5</span><span class="track-title">The Edge of Glory</span><span class="track-duration">5:21</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- ARTPOP -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7a/Ar
- 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Discografia Completa | Lady Gaga</title>
-  
-  <!-- Bootstrap 5.2.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
-  <style>
-    :root {
-      --red-strong: #e11d2d;
-      --gold: #f5c85c;
-      --bg-dark: #0b0b0d;
-      --muted: #9aa1a6;
-    }
- 
-    body {
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(135deg, #05060A 0%, #0b0b0d 100%);
-      color: #e8eef1;
-      padding-top: 80px;
-    }
- 
-    /* NAVBAR */
-    .navbar {
-      background: linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.7)) !important;
-      backdrop-filter: blur(10px);
-    }
- 
-    .navbar-brand {
-      color: var(--red-strong) !important;
-      font-weight: 800;
-    }
- 
-    .nav-link {
-      color: #dfe7ea !important;
-      transition: color 0.3s ease;
-    }
- 
-    .nav-link:hover {
-      color: var(--gold) !important;
-    }
- 
-    /* ALBUM CARDS */
-    .album-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      overflow: hidden;
-      height: 100%;
-    }
- 
-    .album-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(225,29,45,0.2);
-      border-color: var(--red-strong);
-    }
- 
-    .album-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
- 
-    .album-card:hover .album-image {
-      transform: scale(1.05);
-    }
- 
-    .album-year {
-      background: var(--red-strong);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
- 
-    .album-title {
-      color: var(--gold);
-      font-weight: 700;
-      margin: 10px 0 5px 0;
-    }
- 
-    .album-type {
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
- 
-    /* TRACKLIST */
-    .tracklist {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 0 0;
-    }
- 
-    .tracklist li {
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      justify-content: between;
-      align-items: center;
-    }
- 
-    .tracklist li:last-child {
-      border-bottom: none;
-    }
- 
-    .track-number {
-      color: var(--gold);
-      font-weight: 600;
-      margin-right: 10px;
-      min-width: 25px;
-    }
- 
-    .track-title {
-      flex: 1;
-    }
- 
-    .track-duration {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
- 
-    /* STATS */
-    .stats-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
- 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 5px;
-    }
- 
-    .stat-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
- 
-    /* AWARDS */
-    .award-badge {
-      background: linear-gradient(45deg, var(--red-strong), var(--gold));
-      color: white;
-      padding: 5px 12px;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin: 2px;
-      display: inline-block;
-    }
- 
-    /* FILTER BUTTONS */
-    .filter-btn {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--muted);
-      padding: 8px 20px;
-      border-radius: 25px;
-      margin: 5px;
-      transition: all 0.3s ease;
-    }
- 
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: var(--red-strong);
-      color: white;
-      border-color: var(--red-strong);
-    }
- 
-    /* SECTION TITLES */
-    .section-title {
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 2rem;
-      position: relative;
-      display: inline-block;
-    }
- 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--red-strong);
-    }
-  </style>
-</head>
-<body>
-  <!-- NAVIGATION -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">LADY GAGA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#bio">Biografia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="discografia.html">Discografia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#galeria">Galeria</a>
-          </li>
-        </ul>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Bio Section -->
+    <section id="bio" class="section-bg">
+      <div class="container">
+        <h2 class="section-title">Biografia</h2>
+        <p>Lady Gaga nasceu em Nova York e se tornou uma das maiores artistas do século XXI...</p>
       </div>
-    </div>
-  </nav>
- 
-  <!-- HERO SECTION -->
-  <section class="py-5 mt-5">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h1 class="display-4 fw-bold mb-3">Discografia Completa</h1>
-          <p class="lead mb-4">Explore toda a jornada musical de Lady Gaga, desde The Fame até Chromatica</p>
-          
-          <!-- FILTER BUTTONS -->
-          <div class="mb-5">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="album">Álbuns</button>
-            <button class="filter-btn" data-filter="ep">EPs</button>
-            <button class="filter-btn" data-filter="soundtrack">Trilhas Sonoras</button>
-            <button class="filter-btn" data-filter="collab">Colaborações</button>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section-bg">
+      <div class="container">
+        <h2 class="section-title">Linha do Tempo</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-badge bg-danger">2008</div>
+            <div class="timeline-panel">
+              <h5>Primeiro Álbum</h5>
+              <p>Lançamento de "The Fame". A carreira de Lady Gaga decola...</p>
+            </div>
           </div>
+          <!-- Add more items here -->
         </div>
       </div>
-    </div>
-  </section>
- 
-  <!-- ALBUMS GRID -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">Álbuns de Estúdio</h2>
-      <div class="row g-4" id="albumsGrid">
-        
-        <!-- THE FAME -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7b/Lady_Gaga_-_The_Fame.png" alt="The Fame" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2008</span>
-                <span class="award-badge">8× Platina</span>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-bg">
+      <div class="container">
+        <h2 class="section-title">Galeria</h2>
+        <div class="row">
+          <!-- Example gallery items -->
+          <div class="col-md-4">
+            <div class="card bg-dark">
+              <img src="image1.jpg" alt="Album Image" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Imagens de Lady Gaga em suas performances icônicas.</p>
               </div>
-              <h3 class="album-title">The Fame</h3>
-              <p class="album-type">Álbum de Estúdio • Pop</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Just Dance</span><span class="track-duration">4:02</span></li>
-                <li><span class="track-number">2</span><span class="track-title">LoveGame</span><span class="track-duration">3:36</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Poker Face</span><span class="track-duration">3:58</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Eh, Eh (Nothing Else I Can Say)</span><span class="track-duration">2:55</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Beautiful, Dirty, Rich</span><span class="track-duration">2:53</span></li>
-              </ul>
             </div>
           </div>
-        </div>
- 
-        <!-- THE FAME MONSTER -->
-        <div class="col-md-6 col-lg-4" data-category="ep">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/e/e0/The_Fame_Monster.png" alt="The Fame Monster" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2009</span>
-                <span class="award-badge">5× Platina</span>
-              </div>
-              <h3 class="album-title">The Fame Monster</h3>
-              <p class="album-type">EP • Pop/Dance</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Bad Romance</span><span class="track-duration">4:54</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Alejandro</span><span class="track-duration">4:34</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Monster</span><span class="track-duration">4:10</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Speechless</span><span class="track-duration">4:31</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Dance in the Dark</span><span class="track-duration">4:49</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- BORN THIS WAY -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7a/BornThisWayAlbum.png" alt="Born This Way" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2011</span>
-                <span class="award-badge">4× Platina</span>
-              </div>
-              <h3 class="album-title">Born This Way</h3>
-              <p class="album-type">Álbum de Estúdio • Pop/Rock</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Marry the Night</span><span class="track-duration">4:25</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Born This Way</span><span class="track-duration">4:20</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Government Hooker</span><span class="track-duration">4:14</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Judas</span><span class="track-duration">4:10</span></li>
-                <li><span class="track-number">5</span><span class="track-title">The Edge of Glory</span><span class="track-duration">5:21</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- ARTPOP -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            
- 
-   <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7a/Artpop_-_Capa.jpg" alt="ARTPOP" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2013</span>
-                <span class="award-badge">2× Platina</span>
-              </div>
-              <h3 class="album-title">ARTPOP</h3>
-              <p class="album-type">Álbum de Estúdio • Eletropop</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Aura</span><span class="track-duration">3:55</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Venus</span><span class="track-duration">3:54</span></li>
-                <li><span class="track-number">3</span><span class="track-title">G.U.Y.</span><span class="track-duration">3:52</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Sexxx Dreams</span><span class="track-duration">3:34</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Do What U Want</span><span class="track-duration">3:47</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- CHEEK TO CHEEK (COM TONY BENNETT) -->
-        <div class="col-md-6 col-lg-4" data-category="collab">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/0/0c/Cheek_to_Cheek_-_Capa.png" alt="Cheek to Cheek" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2014</span>
-                <span class="award-badge">Grammy Award</span>
-              </div>
-              <h3 class="album-title">Cheek to Cheek</h3>
-              <p class="album-type">Colaboração • Jazz</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Anything Goes</span><span class="track-duration">2:04</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Cheek to Cheek</span><span class="track-duration">2:51</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Nature Boy</span><span class="track-duration">4:08</span></li>
-                <li><span class="track-number">4</span><span class="track-title">I Can't Give You Anything But Love</span><span class="track-duration">3:13</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Lush Life</span><span class="track-duration">4:15</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- JOANNE -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/71/Joanne_%28%C3%A1lbum%29.png" alt="Joanne" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2016</span>
-                <span class="award-badge">Platina</span>
-              </div>
-              <h3 class="album-title">Joanne</h3>
-              <p class="album-type">Álbum de Estúdio • Pop/Rock</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Diamond Heart</span><span class="track-duration">3:30</span></li>
-                <li><span class="track-number">2</span><span class="track-title">A-YO</span><span class="track-duration">3:28</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Joanne</span><span class="track-duration">3:17</span></li>
-                <li><span class="track-number">4</span><span class="track-title">John Wayne</span><span class="track-duration">2:54</span></li>
-                <li><span class="track-number">5</span><span class="track-title">Million Reasons</span><span class="track-duration">3:25</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- A STAR IS BORN -->
-        <div class="col-md-6 col-lg-4" data-category="soundtrack">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/7e/A_Star_Is_Born_%28trilha_sonora%29.png" alt="A Star Is Born" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2018</span>
-                <span class="award-badge">Oscar • Grammy</span>
-              </div>
-              <h3 class="album-title">A Star Is Born</h3>
-              <p class="album-type">Trilha Sonora • Pop/Rock</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Black Eyes</span><span class="track-duration">3:02</span></li>
-                <li><span class="track-number">2</span><span class="track-title">La Vie En Rose</span><span class="track-duration">2:59</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Shallow</span><span class="track-duration">3:37</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Always Remember Us This Way</span><span class="track-duration">3:30</span></li>
-                <li><span class="track-number">5</span><span class="track-title">I'll Never Love Again</span><span class="track-duration">4:41</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-        <!-- CHROMATICA -->
-        <div class="col-md-6 col-lg-4" data-category="album">
-          <div class="album-card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/6/64/Lady_Gaga_-_Chromatica.png" alt="Chromatica" class="album-image">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="album-year">2020</span>
-                <span class="award-badge">Platina</span>
-              </div>
-              <h3 class="album-title">Chromatica</h3>
-              <p class="album-type">Álbum de Estúdio • Dance-pop</p>
-              
-              <ul class="tracklist">
-                <li><span class="track-number">1</span><span class="track-title">Alice</span><span class="track-duration">2:58</span></li>
-                <li><span class="track-number">2</span><span class="track-title">Stupid Love</span><span class="track-duration">3:13</span></li>
-                <li><span class="track-number">3</span><span class="track-title">Rain On Me</span><span class="track-duration">3:02</span></li>
-                <li><span class="track-number">4</span><span class="track-title">Free Woman</span><span class="track-duration">3:11</span></li>
-                <li><span class="track-number">5</span><span class="track-title">911</span><span class="track-duration">2:52</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
- 
-      </div>
-    </div>
-  </section>
- 
-  <!-- STATISTICS SECTION -->
-  <section class="py-5 bg-dark">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Números da Carreira</h2>
-      <div class="row text-center">
-        <div class="col-md-3 mb-4">
-          <div class="stats-card">
-            <div class="stat-number">15</div>
-            <div class="stat-label">Grammy Awards</div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="stats-card">
-            <div class="stat-number">146M+</div>
-            <div class="stat-label">Álbuns Vendidos</div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="stats-card">
-            <div class="stat-number">12</div>
-            <div class="stat-label">Nº1 Billboard</div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="stats-card">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Álbuns Multi-platina</div>
-          </div>
+          <!-- Add more cards here -->
         </div>
       </div>
-    </div>
-  </section>
- 
-  <!-- FOOTER -->
-  <footer class="py-4 text-center">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 — Projeto: Lady Gaga | Discografia Completa</p>
-      <small class="text-muted">Desenvolvido por equipe Little Monsters</small>
-    </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Little Monsters | Todos os direitos reservados.</p>
   </footer>
- 
-  <!-- Bootstrap JS -->
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
- 
-  <!-- FILTER FUNCTIONALITY -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const albumCards = document.querySelectorAll('[data-category]');
- 
-      filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          // Remove active class from all buttons
-          filterButtons.forEach(btn => btn.classList.remove('active'));
-          
-          // Add active class to clicked button
-          this.classList.add('active');
-          
-          const filterValue = this.getAttribute('data-filter');
-          
-          // Filter albums
-          albumCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
- 
-      console.log('🎵 Discografia carregada com sucesso!');
-    });
+    AOS.init(); // Inicializa a animação AOS
   </script>
 </body>
 </html>
